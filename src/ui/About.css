@@ -1,0 +1,70 @@
+/* About Section Container */
+#about {
+  padding: 60px 5%; /* percentage makes it fluid */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Image */
+#about img {
+  width: 450px;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Text Content */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  max-width: 600px;
+  text-align: center;
+}
+
+.about-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 992px) {
+  #about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about img {
+    width: 350px;
+    height: 450px;
+  }
+}
+
+@media (max-width: 576px) {
+  #about {
+    padding: 40px 5%;
+  }
+
+  #about img {
+    width: 250px;
+    height: 350px;
+  }
+
+  .about-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+}

@@ -1,3 +1,46 @@
+/* Base Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 2rem;
+  border-radius: 50px 0 0 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Logo */
+.header img {
+  width: 60px;
+  height: auto;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+/* Theme toggle button */
 .theme-toggle {
   width: 60px;
   height: 30px;
@@ -31,4 +74,65 @@
 
 .theme-toggle.dark .toggle-thumb {
   transform: translateX(30px);
+}
+
+/* Menu button (hamburger / close icon) */
+.menu-btn {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  z-index: 5; /* so it stays above the menu */
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 992px) {
+  .nav-links {
+    gap: 1.5rem;
+  }
+  .header img {
+    width: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Hide links by default on mobile */
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background: var(--bg-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: none;
+  }
+
+  /* Show links when menu is active */
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Show menu button on mobile */
+  .menu-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .header img {
+    width: 40px;
+  }
 }

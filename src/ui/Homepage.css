@@ -1,0 +1,61 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#home {
+  padding: 60px 5%; /* percentage padding makes it fluid */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* centers text on smaller screens */
+}
+
+/* Headings */
+#home .title {
+  margin-bottom: 1rem;
+  font-size: clamp(1.8rem, 4vw, 3rem); /* fluid text size */
+  font-weight: bold;
+}
+
+#home .subtitle {
+  margin-bottom: 2rem;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  max-width: 700px;
+}
+
+/* Button */
+.resume-btn {
+  padding: 0.5rem 1.5rem;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.resume-btn {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+.resume-btn:hover {
+  scale: 1.1;
+  opacity: 0.8;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 768px) {
+  #home {
+    padding: 40px 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  #home {
+    padding: 20px 5%;
+  }
+}

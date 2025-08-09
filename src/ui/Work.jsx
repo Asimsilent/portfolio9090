@@ -111,7 +111,7 @@ const projects = [
 function Work() {
   return (
     <section id="work" className="projects-section">
-      <h2 className="projects-title">🧳 My Projects</h2>
+      <h2 className="projects-title">My Projects</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
           <a

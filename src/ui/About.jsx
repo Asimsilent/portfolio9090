@@ -1,30 +1,27 @@
+import "./About.css";
+
 function About() {
   return (
-    <section id="about" className="d-flex justify-content-center align-items-center " style={{padding:"60px 250px"}}>
-      <div className="">
-        <img
-          className=" "
-          style={{ width: "450px", height: "550px", objectFit: "cover" }}
-          src="/seen.jpg"
-          alt="image"
-        />
+    <section id="about">
+      <div>
+        <img src="/seen.jpg" alt="About me" />
       </div>
 
-      <div className="d-flex flex-column justify-content-center align-items-center p-5 gap-5">
+      <div className="about-content">
         <div>
-          <div>Who am i?</div>
-          <div>
+          <h3>Who am I?</h3>
+          <p>
             I’m a computer science student passionate about web development. I
             enjoy building responsive websites using React and exploring UI
-            design
-          </div>
+            design.
+          </p>
         </div>
         <div>
-          <div>My goal!</div>
-          <div>
+          <h3>My goal!</h3>
+          <p>
             Currently learning React and improving my frontend skills with
             personal projects.
-          </div>
+          </p>
         </div>
       </div>
     </section>

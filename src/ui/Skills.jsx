@@ -1,4 +1,4 @@
-import "./Skills.css"; // We'll create this CSS file next
+import "./Skills.css";
 
 const skills = [
   { name: "HTML5", icon: "🌐" },
